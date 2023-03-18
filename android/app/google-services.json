@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "24536231275",
+    "project_id": "roomates-7d171",
+    "storage_bucket": "roomates-7d171.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:24536231275:android:f4431f0224db57157ff02e",
+        "android_client_info": {
+          "package_name": "com.example.roomates"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "24536231275-o0mblbb5fd5hreiettkn3covcee105vs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyrkhGpkerhPuIRcapP8i9o_F-UUoA3DA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "24536231275-o0mblbb5fd5hreiettkn3covcee105vs.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "24536231275-co72uql7ah7t41akk0bplevqf9g236al.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.roomates"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

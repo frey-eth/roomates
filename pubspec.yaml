@@ -1,0 +1,29 @@
+name: roomates
+description: roomates for roommates.
+
+publish_to: 'none' 
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.19.4 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  firebase_auth: ^4.2.10
+  firebase_core: ^2.7.1
+  google_sign_in: ^6.0.2
+  cloud_firestore: ^4.4.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  assets:
+    - assets/images/facebook.png
+    - assets/images/google-symbol.png
+  uses-material-design: true
+  
