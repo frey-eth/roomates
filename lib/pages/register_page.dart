@@ -19,7 +19,7 @@ class _RegisterPageState extends State<RegisterPage> {
   final _lastNameController = TextEditingController();
 
   //sign user up method
-  void signUserUp() async {
+  Future signUserUp() async {
     //show loading circle
     showDialog(
         context: context,
@@ -54,7 +54,7 @@ class _RegisterPageState extends State<RegisterPage> {
   }
 
   Future addUserDetails(String firstName, String lastName, String email) async {
-    await FirebaseFirestore.instance.collection('users').add({
+    await FirebaseFirestore.instance.collection('users').doc(email).set({
       'first name': firstName,
       'last name': lastName,
       'email': email,
@@ -426,6 +426,15 @@ class _RegisterPageState extends State<RegisterPage> {
   }
 
   @override
+  void dispone() {
+    _emailController.dispose();
+    _passwordController.dispose();
+    _passwordConfirmController.dispose();
+    _firstNameController.dispose();
+    _lastNameController.dispose();
+    super.dispose();
+  }
+
   Widget build(BuildContext context) {
     return GestureDetector(
         onTap: () {

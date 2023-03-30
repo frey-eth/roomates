@@ -12,9 +12,12 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.2
   firebase_auth: ^4.2.10
-  firebase_core: ^2.7.1
+  firebase_core: ^2.8.0
   google_sign_in: ^6.0.2
   cloud_firestore: ^4.4.5
+  firebase_database: ^10.0.16
+  table_calendar: ^3.0.8
+  image_picker: ^0.8.7+1
 
 dev_dependencies:
   flutter_test:

@@ -2,7 +2,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:roomates/pages/forgot_password_page.dart';
 
-
 class LoginPage extends StatefulWidget {
   final Function()? onTap;
   const LoginPage({super.key, required this.onTap});
@@ -267,6 +266,7 @@ class _LoginPageState extends State<LoginPage> {
             width: 60,
             decoration: BoxDecoration(
                 shape: BoxShape.circle,
+                color: Colors.white,
                 boxShadow: [BoxShadow(offset: Offset(0, 2), blurRadius: 6.0)],
                 image: DecorationImage(
                     image: AssetImage('assets/images/facebook.png'))),
