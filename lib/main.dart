@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:roomates/pages/auth_page.dart';
-import 'pages/login.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 
@@ -19,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: AuthPage(),
+      home: const AuthPage(),
       theme: ThemeData(primarySwatch: Colors.blueGrey),
     );
   }

@@ -18,6 +18,8 @@ dependencies:
   firebase_database: ^10.0.16
   table_calendar: ^3.0.8
   image_picker: ^0.8.7+1
+  firebase_storage: ^11.1.0
+
 
 dev_dependencies:
   flutter_test:
@@ -25,8 +27,13 @@ dev_dependencies:
   flutter_lints: ^2.0.0
 
 flutter:
+  fonts:
+    - family: Alkatra
+      fonts:
+        - asset: lib/fonts/Alkatra-Regular.ttf
   assets:
     - assets/images/facebook.png
     - assets/images/google-symbol.png
+    - assets/images/default_avatar.png
   uses-material-design: true
   

@@ -44,39 +44,40 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBMHJmLgJOj8NXnsVQ2twU91KVynqelWWo',
-    appId: '1:24536231275:web:b96632363c7c009d7ff02e',
-    messagingSenderId: '24536231275',
-    projectId: 'roomates-7d171',
-    authDomain: 'roomates-7d171.firebaseapp.com',
-    storageBucket: 'roomates-7d171.appspot.com',
+    apiKey: 'AIzaSyCFrRH7oROiU1VrK-RvG3JIRRzSuRtmvQU',
+    appId: '1:650089109617:web:78055dbfef5ad5409d23d0',
+    messagingSenderId: '650089109617',
+    projectId: 'roomates-52b99',
+    authDomain: 'roomates-52b99.firebaseapp.com',
+    storageBucket: 'roomates-52b99.appspot.com',
+    measurementId: 'G-7W89DL3S4P',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCyrkhGpkerhPuIRcapP8i9o_F-UUoA3DA',
-    appId: '1:24536231275:android:f4431f0224db57157ff02e',
-    messagingSenderId: '24536231275',
-    projectId: 'roomates-7d171',
-    storageBucket: 'roomates-7d171.appspot.com',
+    apiKey: 'AIzaSyBDBi6ruKo-06_RANv2MnMFVa-bRG8Q2hA',
+    appId: '1:650089109617:android:e52f5f14205ddf659d23d0',
+    messagingSenderId: '650089109617',
+    projectId: 'roomates-52b99',
+    storageBucket: 'roomates-52b99.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyD_1rZ0-cNO3v7hU1NV6KcQy5DW78PVgzA',
-    appId: '1:24536231275:ios:4c40fc8654b6253a7ff02e',
-    messagingSenderId: '24536231275',
-    projectId: 'roomates-7d171',
-    storageBucket: 'roomates-7d171.appspot.com',
-    iosClientId: '24536231275-co72uql7ah7t41akk0bplevqf9g236al.apps.googleusercontent.com',
+    apiKey: 'AIzaSyAEl6fkG2jxuOSGEicNJka8hoeEj78G-gg',
+    appId: '1:650089109617:ios:b6140517f85bee879d23d0',
+    messagingSenderId: '650089109617',
+    projectId: 'roomates-52b99',
+    storageBucket: 'roomates-52b99.appspot.com',
+    iosClientId: '650089109617-o3cja2n0dt0aog6ctls0v98jfpk2ui5u.apps.googleusercontent.com',
     iosBundleId: 'com.example.roomates',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyD_1rZ0-cNO3v7hU1NV6KcQy5DW78PVgzA',
-    appId: '1:24536231275:ios:4c40fc8654b6253a7ff02e',
-    messagingSenderId: '24536231275',
-    projectId: 'roomates-7d171',
-    storageBucket: 'roomates-7d171.appspot.com',
-    iosClientId: '24536231275-co72uql7ah7t41akk0bplevqf9g236al.apps.googleusercontent.com',
+    apiKey: 'AIzaSyAEl6fkG2jxuOSGEicNJka8hoeEj78G-gg',
+    appId: '1:650089109617:ios:b6140517f85bee879d23d0',
+    messagingSenderId: '650089109617',
+    projectId: 'roomates-52b99',
+    storageBucket: 'roomates-52b99.appspot.com',
+    iosClientId: '650089109617-o3cja2n0dt0aog6ctls0v98jfpk2ui5u.apps.googleusercontent.com',
     iosBundleId: 'com.example.roomates',
   );
 }

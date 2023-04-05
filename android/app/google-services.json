@@ -1,41 +1,34 @@
 {
   "project_info": {
-    "project_number": "24536231275",
-    "project_id": "roomates-7d171",
-    "storage_bucket": "roomates-7d171.appspot.com"
+    "project_number": "650089109617",
+    "project_id": "roomates-52b99",
+    "storage_bucket": "roomates-52b99.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:24536231275:android:f4431f0224db57157ff02e",
+        "mobilesdk_app_id": "1:650089109617:android:e52f5f14205ddf659d23d0",
         "android_client_info": {
           "package_name": "com.example.roomates"
         }
       },
       "oauth_client": [
         {
-          "client_id": "24536231275-glvc8pilhtank8avk0d3fquu3vrjqljb.apps.googleusercontent.com",
+          "client_id": "650089109617-0m0adirhhosakpckv75l3s846ijgthfm.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCyrkhGpkerhPuIRcapP8i9o_F-UUoA3DA"
+          "current_key": "AIzaSyBDBi6ruKo-06_RANv2MnMFVa-bRG8Q2hA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "24536231275-glvc8pilhtank8avk0d3fquu3vrjqljb.apps.googleusercontent.com",
+              "client_id": "650089109617-0m0adirhhosakpckv75l3s846ijgthfm.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "24536231275-co72uql7ah7t41akk0bplevqf9g236al.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.roomates"
-              }
             }
           ]
         }

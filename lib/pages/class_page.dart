@@ -1,11 +1,16 @@
+import 'dart:io';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:roomates/pages/calendal.dart';
 import 'package:roomates/pages/profile_page.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:image_picker/image_picker.dart';
 
 class ClassPage extends StatefulWidget {
-  const ClassPage({super.key});
+  final String roomID;
+  final List<String> members;
+  const ClassPage({super.key, required this.roomID, required this.members});
 
   @override
   State<ClassPage> createState() => _ClassPageState();
@@ -14,7 +19,7 @@ class ClassPage extends StatefulWidget {
 class _ClassPageState extends State<ClassPage> {
   late User _user;
   late String _email;
-  final FirebaseFirestore firestore = FirebaseFirestore.instance;
+
   @override
   void initState() {
     // TODO: implement initState
@@ -24,7 +29,6 @@ class _ClassPageState extends State<ClassPage> {
   }
 
   int _selectedIndex = 0;
-
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
@@ -37,16 +41,47 @@ class _ClassPageState extends State<ClassPage> {
     if (documentSnapshot.exists) {
       final firstName = documentSnapshot.get('first name');
       final lastName = documentSnapshot.get('last name');
-      return [firstName, lastName];
+      final avatarUrl;
+      if (documentSnapshot.data()!.containsKey('avatarUrl')) {
+        avatarUrl = documentSnapshot.get('avatarUrl');
+      } else {
+        avatarUrl = null;
+      }
+
+      return [firstName, lastName, avatarUrl];
     } else {
-      return [null, null];
+      return [null, null, null];
     }
+  }
+
+  Future<void> uploadAvatar() async {
+    final pickedFile = await ImagePicker().pickImage(
+      source: ImageSource.gallery,
+      maxWidth: 512,
+      maxHeight: 512,
+      imageQuality: 75,
+    );
+    Reference ref = FirebaseStorage.instance
+        .ref()
+        .child('avatarProfile')
+        .child('${DateTime.now().millisecondsSinceEpoch}.jpg');
+    final task = ref.putFile(File(pickedFile!.path));
+    // get link after upload image
+    final snapshot = await task.whenComplete(() => null);
+    final downloadUrl = await snapshot.ref.getDownloadURL();
+    await FirebaseFirestore.instance
+        .collection('users')
+        .doc(_email)
+        .update({'avatarUrl': downloadUrl});
+    setState(() {});
   }
 
   @override
   Widget build(BuildContext context) {
     final List<Widget> _widgetOptions = <Widget>[
-      Calendal(),
+      Calendal(
+        roomID: widget.roomID,
+      ),
       FutureBuilder<List<String?>>(
         future: getUserData(),
         builder: (BuildContext context, AsyncSnapshot<List<String?>> snapshot) {
@@ -71,6 +106,8 @@ class _ClassPageState extends State<ClassPage> {
               first_name: snapshot.data![0] ?? '',
               last_name: snapshot.data![1] ?? '',
               email: _email,
+              uploadAvatar: uploadAvatar,
+              avatarUrl: snapshot.data![2] ?? '',
             );
           }
         },
