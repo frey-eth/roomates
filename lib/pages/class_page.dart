@@ -118,15 +118,31 @@ class _ClassPageState extends State<ClassPage> {
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 235, 174, 194),
       ),
-      body: IndexedStack(
-        index: _selectedIndex,
-        children: _widgetOptions,
+      body: Center(
+        child: Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+            begin: Alignment.topRight,
+            end: Alignment.bottomLeft,
+            colors: [
+              Color.fromARGB(255, 118, 178, 228),
+              Color.fromARGB(255, 197, 102, 89),
+            ],
+          )),
+          child: Center(
+            child: IndexedStack(
+              index: _selectedIndex,
+              children: _widgetOptions,
+            ),
+          ),
+        ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
         ],
+        backgroundColor: Color.fromARGB(255, 235, 174, 194),
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
       ),

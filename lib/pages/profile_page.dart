@@ -59,7 +59,7 @@ class _ProfileState extends State<Profile> {
               style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
-                  color: Colors.lightBlueAccent),
+                  color: Color.fromARGB(255, 0, 9, 14)),
             ),
             Icon(
               Icons.verified,

@@ -45,6 +45,7 @@ class _HomePageState extends State<HomePage> {
       final newRoomData = {
         'roomID': roomID,
         'member': [user!.email],
+        'owner': user!.email,
       };
       await roomsRef.doc(roomID).set(newRoomData);
     }
@@ -59,13 +60,13 @@ class _HomePageState extends State<HomePage> {
     if (roomSnapshot.exists) {
       List<String> members = List<String>.from(roomSnapshot.get('member'));
       if (!members.contains(user!.email)) {
-        members.add(user!.email??'');
+        members.add(user!.email ?? '');
         await FirebaseFirestore.instance
             .collection('rooms')
             .doc(roomID)
             .update({'member': members});
       }
-     
+
       Navigator.push(
           context,
           MaterialPageRoute(
