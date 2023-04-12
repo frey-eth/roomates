@@ -284,7 +284,7 @@ class _CalendalState extends State<Calendal> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Padding(
-      padding: const EdgeInsets.all(15),
+      padding: const EdgeInsets.all(5),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [

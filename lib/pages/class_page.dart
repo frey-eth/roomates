@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:roomates/pages/calendal.dart';
+import 'package:roomates/pages/chat_page.dart';
 import 'package:roomates/pages/profile_page.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:image_picker/image_picker.dart';
@@ -112,12 +113,11 @@ class _ClassPageState extends State<ClassPage> {
           }
         },
       ),
+      ChatScreen(roomId: widget.roomID, userId: _email)
     ];
 
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 235, 174, 194),
-      ),
+    return SafeArea(
+        child: Scaffold(
       body: Center(
         child: Container(
           decoration: BoxDecoration(
@@ -141,11 +141,12 @@ class _ClassPageState extends State<ClassPage> {
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
+          BottomNavigationBarItem(icon: Icon(Icons.chat_bubble), label: 'Chat'),
         ],
         backgroundColor: Color.fromARGB(255, 235, 174, 194),
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
       ),
-    );
+    ));
   }
 }
