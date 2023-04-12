@@ -1,5 +1,5 @@
 # roomates
- roomates for roommate
+A simple app to roommate for assignment homework
 ![image](https://user-images.githubusercontent.com/83070538/231489708-d3ff15ee-de21-4355-8a69-53ce73665391.png)
 
 ![image](https://user-images.githubusercontent.com/83070538/231489785-7719e4bf-f65c-47cc-80e7-33cbecbf3129.png)
