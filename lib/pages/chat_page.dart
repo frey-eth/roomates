@@ -90,7 +90,7 @@ class _ChatScreenState extends State<ChatScreen> {
                               ),
                               subtitle: Container(
                                   decoration: BoxDecoration(
-                                      color: Color.fromARGB(255, 79, 101, 122),
+                                      color: Color.fromARGB(255, 44, 69, 92),
                                       border: Border.all(),
                                       borderRadius: BorderRadius.circular(20)),
                                   child: Padding(
@@ -117,7 +117,7 @@ class _ChatScreenState extends State<ChatScreen> {
                     child: Container(
                       padding: EdgeInsets.all(5),
                       decoration: BoxDecoration(
-                          color: Colors.white,
+                        color: Colors.white,
                           border: Border.all(),
                           borderRadius: BorderRadius.circular(20)),
                       child: TextField(

@@ -22,8 +22,9 @@ class Profile extends StatefulWidget {
 class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
-    bool checkAvatar = widget.avatarUrl!='';
+    bool checkAvatar = widget.avatarUrl != '';
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         SizedBox(
@@ -34,13 +35,14 @@ class _ProfileState extends State<Profile> {
             onTap: widget.uploadAvatar,
             child: CircleAvatar(
               radius: 70,
-              backgroundImage: checkAvatar
-                  ? NetworkImage(
-                      widget.avatarUrl)
-                  : null,
+              backgroundImage:
+                  checkAvatar ? NetworkImage(widget.avatarUrl) : null,
               child: checkAvatar
                   ? null
-                  : Icon(Icons.person,size: 70,),
+                  : Icon(
+                      Icons.person,
+                      size: 70,
+                    ),
             ),
           ),
         ),
@@ -67,6 +69,7 @@ class _ProfileState extends State<Profile> {
             )
           ],
         ),
+       
       ],
     );
   }
